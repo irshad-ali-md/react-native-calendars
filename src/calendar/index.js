@@ -75,7 +75,9 @@ class Calendar extends Component {
     // Handler which gets executed when press arrow icon left. It receive a callback can go back month
     onPressArrowLeft: PropTypes.func,
     // Handler which gets executed when press arrow icon left. It receive a callback can go next month
-    onPressArrowRight: PropTypes.func
+    onPressArrowRight: PropTypes.func,
+
+    reservationNum: PropTypes.any,
   };
 
   constructor(props) {
@@ -173,6 +175,7 @@ class Calendar extends Component {
 
     const DayComp = this.getDayComponent();
     const date = day.getDate();
+    const value = this.props.reservationNum[day.toString('yyyy-MM-dd')];
     return (
       <View style={{flex: 1, alignItems: 'center'}} key={id}>
         <DayComp
@@ -182,6 +185,7 @@ class Calendar extends Component {
           onLongPress={this.longPressDay}
           date={xdateToData(day)}
           marking={this.getDateMarking(day)}
+          value={value}
         >
           {date}
         </DayComp>

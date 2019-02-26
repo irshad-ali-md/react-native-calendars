@@ -19,7 +19,8 @@ class Day extends Component {
     marking: PropTypes.any,
     onPress: PropTypes.func,
     onLongPress: PropTypes.func,
-    date: PropTypes.object
+    date: PropTypes.object,
+    value: PropTypes.any,
   };
 
   constructor(props) {
@@ -83,7 +84,8 @@ class Day extends Component {
         activeOpacity={marking.activeOpacity}
         disabled={marking.disableTouchEvent}
       >
-        <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}(4)</Text>
+        <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
+        <Text style={{ fontSize: 12, fontWeight: 'bold' }}>{String(this.props.value)}</Text>
         {dot}
       </TouchableOpacity>
     );
