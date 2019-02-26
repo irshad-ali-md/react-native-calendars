@@ -58,8 +58,7 @@ class Day extends Component {
       if (marking.dotColor) {
         dotStyle.push({backgroundColor: marking.dotColor});
       }
-      // dot = (<View style={dotStyle}/>);
-      dot = (<Text>4</Text>);
+      dot = (<View style={dotStyle}/>);
     }
 
     if (marking.selected) {
@@ -84,7 +83,7 @@ class Day extends Component {
         activeOpacity={marking.activeOpacity}
         disabled={marking.disableTouchEvent}
       >
-        <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
+        <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}(4)</Text>
         {dot}
       </TouchableOpacity>
     );
