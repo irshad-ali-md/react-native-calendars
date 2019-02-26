@@ -7,8 +7,8 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 33,
-      height: 33,
+      width: 34,
+      height: 34,
       alignItems: 'center'
     },
     text: {

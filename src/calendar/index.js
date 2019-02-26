@@ -175,7 +175,7 @@ class Calendar extends Component {
 
     const DayComp = this.getDayComponent();
     const date = day.getDate();
-    const value = this.props.reservationNum[day.toString('yyyy-MM-dd')];
+    const value = this.props.reservationNum[day.toString('yyyy-MM-dd')] || '';
     return (
       <View style={{flex: 1, alignItems: 'center'}} key={id}>
         <DayComp
