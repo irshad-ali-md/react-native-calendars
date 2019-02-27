@@ -7,13 +7,13 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 36,
-      height: 36,
+      width: 38,
+      height: 38,
       alignItems: 'center'
     },
     text: {
-      marginTop: Platform.OS === 'android' ? 4 : 6,
-      fontSize: appStyle.textDayFontSize,
+      marginTop: Platform.OS === 'android' ? 2 : 6,
+      fontSize: 12,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: '300',
       color: appStyle.dayTextColor,
