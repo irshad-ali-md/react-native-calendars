@@ -7,8 +7,8 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 38,
-      height: 38,
+      width: 40,
+      height: 40,
       alignItems: 'center'
     },
     text: {
@@ -24,7 +24,7 @@ export default function styleConstructor(theme={}) {
     },
     selected: {
       backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 16
+      borderRadius: 20
     },
     today: {
       backgroundColor: appStyle.todayBackgroundColor
