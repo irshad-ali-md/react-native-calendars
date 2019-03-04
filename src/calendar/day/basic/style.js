@@ -1,4 +1,4 @@
-import {StyleSheet, Platform} from 'react-native';
+import {StyleSheet, Platform, Dimensions} from 'react-native';
 import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.basic';
@@ -7,9 +7,11 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 40,
-      height: 40,
-      alignItems: 'center'
+      width: Dimensions.get('window').width / 8,
+      height: Dimensions.get('window').height / 14,
+      alignItems: 'center',
+      borderWidth: 1,
+      borderColor: '#ddd',
     },
     text: {
       marginTop: Platform.OS === 'android' ? 2 : 6,
